@@ -1,0 +1,21 @@
+{
+  email you@example.com
+  # Optional: switch ACME CA
+  # acme_ca https://acme.zerossl.com/v2/DV90
+}
+
+# This hostname should resolve (via your internal DNS) to the ZeroTier IP (ZT_IP) for clients
+joplin.internal.example.com {
+  bind {env.ZT_IP}
+
+  tls {
+    dns cloudflare {env.CF_API_TOKEN}
+    # key_type p256
+  }
+
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  }
+
+  reverse_proxy 127.0.0.1:22300
+}
