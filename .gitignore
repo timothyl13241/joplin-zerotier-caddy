@@ -1,0 +1,16 @@
+# Compose and Caddy data
+caddy/data/
+caddy/config/
+
+# Postgres volumes
+data/
+pg_data/
+transcribe_pg_data/
+
+# Env files
+.env
+caddy/env
+
+# OS/editor
+.DS_Store
+Thumbs.db
