@@ -93,3 +93,21 @@ Replace `ztXXXXXX` with your host's ZeroTier interface name.
 - If Caddy can’t issue certificates, verify Cloudflare token scope and that TXT records are created for `_acme-challenge.joplin.internal.example.com`.
 - If clients can’t connect, confirm they’re on ZeroTier and resolve the hostname to the ZeroTier IP.
 - If Joplin shows "Invalid base URL", ensure `APP_BASE_URL` matches the Caddy hostname and includes `https://`.
+
+## License and Attribution
+
+This repository (docker-compose configuration, Caddy setup, and documentation) is licensed under the [MIT License](LICENSE).
+
+**Joplin Server** is proprietary software licensed under the [Joplin Server Personal Use License](https://github.com/laurent22/joplin/blob/dev/packages/server/LICENSE.md), which restricts use to **non-commercial purposes only**. By deploying Joplin Server using this repository, you agree to comply with that license.
+
+Other components of the Joplin project (desktop/mobile clients) are licensed under [AGPL-3.0-or-later](https://github.com/laurent22/joplin/blob/dev/LICENSE).
+
+This project is not affiliated with or endorsed by Joplin SAS or Laurent Cozic. Joplin® is a registered trademark of JOPLIN SAS.
+
+### Third-party components
+
+- [Joplin Server](https://github.com/laurent22/joplin) – Proprietary (Personal Use License, non-commercial only)
+- [Caddy](https://github.com/caddyserver/caddy) – Apache 2.0
+- [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare) – Apache 2.0
+- [ZeroTier](https://github.com/zerotier/ZeroTierOne) – Business Source License 1.1
+- [PostgreSQL](https://www.postgresql.org/about/licence/) – PostgreSQL License (BSD-style)
